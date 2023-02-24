@@ -31,6 +31,14 @@ def test_expanded_form(num, expected):
     (0.004,  "4/1000"),
     (807.304,  "800 + 7 + 3/10 + 4/1000"),
     (7.0004,  "7 + 4/10000"),
+    # test cases from hypothesis to check out:
+    # 4078675579893530.0
+    # -1.5
+    # 1e-05
+    # 3.923726177161579e+16
+    # -4.46910601648927e+16
+    # -inf
+    # -nan
 ))
 def test_expanded_form_part2(num, expected):
     assert expander.expanded_form(num) == expected
